@@ -9,7 +9,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
 
 ## How to Use this library
 
-1.  Set Type Of Header
+#### 1.  Set Type Of Header
 
     As we have different header in OData like `verbose`, `minimalmetadata` or `nometadata`. Default header is verbose but you can change it.
 
@@ -26,12 +26,12 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             OR
         spJS.setMinimalMetaData(false)
 
-2.  Set Site URL
+#### 2.  Set Site URL
 
         var spJS = SPUtility();
         spJS.setSiteUrl("https://<siteName>.sharepoint.com")
 
-3.  Get User Properties
+#### 3.  Get User Properties
 
         var spJS = SPUtility();
         spJS.getUserProperties('testUser@domain.com',"PropertyName").then(function(data){
@@ -40,7 +40,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-4.  Get All Properties of user
+#### 4.  Get All Properties of user
 
         var spJS = SPUtility();
         spJS.getAllUserProperties('testUser@domain.com').then(function(data){
@@ -56,7 +56,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-5.  Current User
+#### 5.  Current User
 
         var spJS = SPUtility();
         spJS.web.currentUser().then(function(user){
@@ -65,7 +65,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-6.  Ensure User
+#### 6.  Ensure User
 
         var spJS = SPUtility();
         spJS.web.ensureUser('testUser@domain.com').then(function(user){
@@ -74,7 +74,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-7.  Get Roles
+#### 7.  Get Roles
 
         var spJS = SPUtility();
         spJS.web.getRoles().then(function(data){
@@ -83,7 +83,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-8.  Check web permission inheritance is broken or not
+#### 8.  Check web permission inheritance is broken or not
 
         var spJS = SPUtility();
         spJS.web.hasuniqueroleassignments().then(function(data){
@@ -92,7 +92,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-9.  Break Permission for Web
+#### 9.  Break Permission for Web
 
         var copyRoleAssignment = true, clearSubscope = false, spJS = SPUtility();
         spJS.web.breakroleinheritance(copyRoleAssignment,clearSubscope).then(function(data){
@@ -101,7 +101,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-10. Reset Permission for Web
+#### 10. Reset Permission for Web
 
         var spJS = SPUtility();
         spJS.web.resetroleinheritance().then(function(data){
@@ -110,7 +110,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-11. Add Permission for Web
+#### 11. Add Permission for Web
 
         var groupIdorUserId = 1, roleDefId = 1, spJS = SPUtility();
         spJS.web.addRoleAssignment(groupIdorUserId,roleDefId).then(function(data){
@@ -119,7 +119,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-12. Remove Permssion from Web
+#### 12. Remove Permssion from Web
 
         var groupIdorUserId = 1, spJS = SPUtility();
         spJS.web.deleteRoleAssignment(groupIdorUserId).then(function(data){
@@ -128,7 +128,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-13. Check List has unique permission
+#### 13. Check List has unique permission
 
         var spJS = SPUtility();
         spJS.web.lists.getListByTitle("ListTitle").hasuniqueroleassignments().then(function(data){
@@ -146,7 +146,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-14. Break Permission for list
+#### 14. Break Permission for list
 
         var copyRoleAssignment = true, clearSubscope = false, spJS = SPUtility();
 
@@ -164,7 +164,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-15. Add Permission to list
+#### 15. Add Permission to list
 
         var groupIdorUserId = 1, roleDefId = 1, spJS = SPUtility();
 
@@ -182,7 +182,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-16. Reset Permission for list
+#### 16. Reset Permission for list
 
         var spJS = SPUtility();
         spJS.web.lists.getListByTitle("ListTitle").resetroleinheritance().then(function(data){
@@ -199,7 +199,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-17. Remove Permission from list
+#### 17. Remove Permission from list
 
         var groupIdorUserId = 1, spJS = SPUtility();
         spJS.web.lists.getListByTitle("ListTitle").deleteRoleAssignment(groupIdorUserId).then(function(data){
@@ -216,7 +216,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-18. Get Default Form URL for List
+#### 18. Get Default Form URL for List
 
         var spJS = SPUtility();
 
@@ -241,7 +241,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-19. Get Items from list
+#### 19. Get Items from list
 
         var spJS = SPUtility();
 
@@ -256,7 +256,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-20. Get All items from list
+#### 20. Get All items from list
 
         var spJS = SPUtility();
 
@@ -271,7 +271,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-21. Get Items as paged from list
+#### 21. Get Items as paged from list
 
         var spJS = SPUtility();
 
@@ -293,7 +293,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-22. Get item by id from list
+#### 22. Get item by id from list
 
         var spJS = SPUtility();
 
@@ -307,7 +307,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-23. Add new item to list
+#### 23. Add new item to list
 
         var spJS = SPUtility();
 
@@ -319,7 +319,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-24. Update item in list
+#### 24. Update item in list
 
         var itemId = 1, eTag = "'1'", spJS = SPUtility();
 
@@ -331,7 +331,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-25. Delete item from list
+#### 25. Delete item from list
 
         var itemId = 1, eTag = "'1'", spJS = SPUtility();
         //Similarly with get by list id.
@@ -342,7 +342,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-26. Check item level permission is breaked or not
+#### 26. Check item level permission is breaked or not
 
         var itemId = 1, spJS = SPUtility();
         //Similarly with get by list id.
@@ -353,7 +353,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-27. Break Permission at item level
+#### 27. Break Permission at item level
 
         var itemId = 1, copyRoleAssignment = true, clearSubscope = false, spJS = SPUtility();
         //Similarly with get by list id.
@@ -365,7 +365,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-28. Reset Permission for item
+#### 28. Reset Permission for item
 
         var itemId = 1, spJS = SPUtility();
         //Similarly with get by list id.
@@ -376,7 +376,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                     console.error(error);
                 })
 
-29. Add Permission to list item
+#### 29. Add Permission to list item
 
         var itemId = 1, groupIdorUserId = 1, roleDefId = 1, spJS = SPUtility();
         //Similarly with get by list id.
@@ -387,7 +387,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 console.error(error);
             })
 
-30. Remove user/group permission from list item
+#### 30. Remove user/group permission from list item
 
         var itemId = 1, groupIdorUserId = 1, spJS = SPUtility();
         //Similarly with get by list id.
@@ -398,7 +398,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 console.error(error);
             })
 
-31. Get Fields from List
+#### 31. Get Fields from List
 
         var spJS = SPUtility();
         //Similarly with get by list id.
@@ -411,7 +411,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 console.error(error);
             })
 
-32. Get Site Columns from Web
+#### 32. Get Site Columns from Web
 
         var spJS = SPUtility();
         spJS.web.siteColumns().Fields
@@ -423,7 +423,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 console.error(error);
             })
 
-33. Batch execution for adding, updating or deleting item in list
+#### 33. Batch execution for adding, updating or deleting item in list
 
         var spJS = SPUtility();
         var batch = new spJS.createNewBatch();
@@ -448,7 +448,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
             console.error(error);
         })
 
-34. Get All SharePoint Groups
+#### 34. Get All SharePoint Groups
 
         var spJS = SPUtility();
         spJS.web.siteGroups.groups
@@ -461,7 +461,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 })
         
         
-35. Get Group by name or id
+#### 35. Get Group by name or id
 
         var spJS = SPUtility();
 
@@ -482,7 +482,7 @@ Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/d
                 })
 
 
-36. Get Users from Group
+#### 36. Get Users from Group
 
         var spJS = SPUtility();
 

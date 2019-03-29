@@ -5,7 +5,7 @@
 Add [SPUtility JS](https://raw.githubusercontent.com/ajDon/SPUtility-JS/master/dist/SPUtility.min.js) reference to the page.
 
         <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script  src="https://rawcdn.githack.com/ajDon/SPUtility-JS/027411b6fbc1a39db4c4fb4aeeda6dc7efdcf3fe/dist/SPUtility.min.js"></script>
+        <script  src="SPUtility.min.js"></script>
 
 ## How to Use this library
 

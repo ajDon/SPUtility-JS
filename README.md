@@ -607,9 +607,10 @@ As we have different header in OData like `verbose`, `minimalmetadata` or `nomet
 
         var spJS = SPUtility();
 
-        spJS.web.folder.createFolder("<siteServerRelative>/Shared Documents/New FolderName").then(function (newFolder) {
-            console.info('New Folder', newFolder);
-        })
+        spJS.web.folder
+                .createFolder("<siteServerRelative>/Shared Documents/New FolderName").then(function (newFolder) {
+                    console.info('New Folder', newFolder);
+                })
 
 #### 46. List Item All Fields For Folder
 
@@ -623,14 +624,15 @@ As we have different header in OData like `verbose`, `minimalmetadata` or `nomet
 
         var spJS = SPUtility(), eTag = '"1"';
 
-        spJS.web.folder.renameFolder("<siteServerRelative>/path/FolderName","New Folder Name", eTag).then(function (folder) {
-            console.info('Folder Object', folder);
-        })
+        spJS.web.folder
+                .renameFolder("<siteServerRelative>/path/FolderName","New Folder Name", eTag).then(function (folder) {
+                    console.info('Folder Object', folder);
+                })
 
 #### 48. Get All files from Folder
 
         var spJS = SPUtility();
-        
+
         spJS.web.folder.getAllFilesFromFolder("<siteServerRelative>/path/FolderName").then(function (data) {
             console.info('All Files', data);
         })

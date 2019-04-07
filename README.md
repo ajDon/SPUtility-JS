@@ -625,7 +625,8 @@ As we have different header in OData like `verbose`, `minimalmetadata` or `nomet
         var spJS = SPUtility(), eTag = '"1"';
 
         spJS.web.folder
-                .renameFolder("<siteServerRelative>/path/FolderName","New Folder Name", eTag).then(function (folder) {
+                .renameFolder("<siteServerRelative>/path/FolderName","New Folder Name", eTag)
+                .then(function (folder) {
                     console.info('Folder Object', folder);
                 })
 
